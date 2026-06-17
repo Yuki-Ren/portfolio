@@ -7,3 +7,7 @@
 
 # Vercel
 .vercel
+
+# 元データ・未使用素材（サイトには使わない）
+*.psd
+images/works/*/view detail/
