@@ -725,32 +725,42 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ===== CONTACT ===== */
 .contact {
-    padding: 36px 0 32px;
+    padding: 72px 0 68px;
     background: var(--color-bg-soft);
     border-top: 1px solid var(--color-border-light);
     text-align: center;
 }
 
 .contact .section-heading {
-    margin-bottom: 10px;
+    margin-bottom: 26px;
 }
 
 .contact .section-en {
     font-size: 28px;
 }
 
+/* お問い合わせ：サブとして少し小さく控えめに */
+.contact .section-ja {
+    font-size: 11px;
+}
+
 .contact-text {
     font-size: 13px;
     font-weight: 300;
     color: var(--color-text-sub);
-    line-height: 1.95;
+    line-height: 2.1;
+}
+
+/* スマホ専用の改行はPC・タブレットでは非表示 */
+.contact-text .contact-br-sp {
+    display: none;
 }
 
 .contact-sns {
     display: flex;
     justify-content: center;
     gap: 32px;
-    margin-top: 20px;
+    margin-top: 48px;
 }
 
 .sns-link {
@@ -1014,7 +1024,7 @@ img { max-width: 100%; height: auto; display: block; }
 
     /* CONTACT */
     .contact {
-        padding: 36px 0 32px;
+        padding: 72px 0 68px;
     }
 }
 
@@ -1322,11 +1332,11 @@ img { max-width: 100%; height: auto; display: block; }
 
     /* CONTACT */
     .contact {
-        padding: 34px 0 30px;
+        padding: 64px 0 60px;
     }
 
     .contact .section-heading {
-        margin-bottom: 10px;
+        margin-bottom: 26px;
     }
 
     .contact .section-en {
@@ -1338,13 +1348,19 @@ img { max-width: 100%; height: auto; display: block; }
         line-height: 1.9;
     }
 
-    .contact-text br {
+    /* スマホは文中の手動改行をやめ、2文だけ分けて自然に折り返す */
+    .contact-text .contact-br-pc,
+    .contact-text .contact-br-sp {
         display: none;
+    }
+
+    .contact-text {
+        text-wrap: pretty;
     }
 
     .contact-sns {
         gap: 28px;
-        margin-top: 18px;
+        margin-top: 48px;
     }
 
     .sns-link svg {
@@ -3896,4 +3912,13 @@ img { max-width: 100%; height: auto; display: block; }
         font-size: 11.5px;
         line-height: 1.9;
     }
+}
+
+/* ==================================================
+   WORK DETAIL - Design Point 見出しをトップのDesign Approach風に
+   （英語タイトル＋日本語サブの section-heading を流用）
+================================================== */
+
+.work-detail-points-heading {
+    margin-bottom: 26px;
 }
