@@ -11,3 +11,7 @@
 # 元データ・未使用素材（サイトには使わない）
 *.psd
 images/works/*/view detail/
+
+# 提案資料（クライアント名を含むため公開しない）
+images/works/*/proposal.html
+images/works/*/proposal_preview.pdf

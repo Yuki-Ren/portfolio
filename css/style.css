@@ -3064,7 +3064,9 @@ img { max-width: 100%; height: auto; display: block; }
     .work-detail-medical-lp-page .work-detail-hero,
     .work-detail-medical-hifu-lp-page .work-detail-hero,
     .work-detail-yoga-story-banner-page .work-detail-hero,
-    .work-detail-yoga-lp-page .work-detail-hero {
+    .work-detail-yoga-lp-page .work-detail-hero,
+    .work-detail-gourmet-post-page .work-detail-hero,
+    .work-detail-protein-banner-page .work-detail-hero {
         position: relative;
         width: 100%;
         height: auto;
@@ -3078,7 +3080,9 @@ img { max-width: 100%; height: auto; display: block; }
     .work-detail-medical-lp-page .work-detail-hero-inner,
     .work-detail-medical-hifu-lp-page .work-detail-hero-inner,
     .work-detail-yoga-story-banner-page .work-detail-hero-inner,
-    .work-detail-yoga-lp-page .work-detail-hero-inner {
+    .work-detail-yoga-lp-page .work-detail-hero-inner,
+    .work-detail-gourmet-post-page .work-detail-hero-inner,
+    .work-detail-protein-banner-page .work-detail-hero-inner {
         position: relative;
         z-index: 2;
         height: 100%;
@@ -3092,7 +3096,9 @@ img { max-width: 100%; height: auto; display: block; }
     .work-detail-medical-lp-page .work-detail-hero-visual,
     .work-detail-medical-hifu-lp-page .work-detail-hero-visual,
     .work-detail-yoga-story-banner-page .work-detail-hero-visual,
-    .work-detail-yoga-lp-page .work-detail-hero-visual {
+    .work-detail-yoga-lp-page .work-detail-hero-visual,
+    .work-detail-gourmet-post-page .work-detail-hero-visual,
+    .work-detail-protein-banner-page .work-detail-hero-visual {
         position: absolute;
         inset: 0;
         width: 100%;
@@ -3104,7 +3110,9 @@ img { max-width: 100%; height: auto; display: block; }
     .work-detail-medical-lp-page .work-detail-hero-picture,
     .work-detail-medical-hifu-lp-page .work-detail-hero-picture,
     .work-detail-yoga-story-banner-page .work-detail-hero-picture,
-    .work-detail-yoga-lp-page .work-detail-hero-picture {
+    .work-detail-yoga-lp-page .work-detail-hero-picture,
+    .work-detail-gourmet-post-page .work-detail-hero-picture,
+    .work-detail-protein-banner-page .work-detail-hero-picture {
         display: block;
         width: 100%;
         height: 100%;
@@ -3115,7 +3123,9 @@ img { max-width: 100%; height: auto; display: block; }
     .work-detail-medical-lp-page .work-detail-hero-image,
     .work-detail-medical-hifu-lp-page .work-detail-hero-image,
     .work-detail-yoga-story-banner-page .work-detail-hero-image,
-    .work-detail-yoga-lp-page .work-detail-hero-image {
+    .work-detail-yoga-lp-page .work-detail-hero-image,
+    .work-detail-gourmet-post-page .work-detail-hero-image,
+    .work-detail-protein-banner-page .work-detail-hero-image {
         display: block;
         width: 100%;
         height: 100%;
@@ -3921,4 +3931,320 @@ img { max-width: 100%; height: auto; display: block; }
 
 .work-detail-points-heading {
     margin-bottom: 26px;
+}
+
+/* ==================================================
+   WORKS - 実績ラベル（Client Works）
+   自主制作（Private Works）と区別するため、
+   ゴールドの塗りで少しだけ強めに見せる
+================================================== */
+
+.work-label--client {
+    color: #FFFFFF;
+    background: var(--color-gold);
+    border-color: var(--color-gold);
+}
+
+/* 詳細ページのヒーロー内ラベル */
+.detail-label--client {
+    color: #FFFFFF;
+    background: var(--color-gold);
+    border-color: var(--color-gold);
+}
+
+/* ==================================================
+   WORK DETAIL 08 - 飲食店 Instagram投稿デザイン
+   Proposal（ご提案3案）セクション
+================================================== */
+
+.work-detail-proposal {
+    padding: 4px 0 64px;
+    background: var(--color-bg);
+}
+
+.work-detail-proposal-lead {
+    margin: 0 auto 34px;
+    max-width: 720px;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 2;
+    color: var(--color-text-sub);
+    text-align: center;
+    text-wrap: pretty;
+}
+
+.work-detail-proposal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    align-items: start;
+}
+
+.work-detail-proposal-card {
+    margin: 0;
+    padding: 0 0 20px;
+    border: 1px solid var(--color-border-light);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.35);
+    overflow: hidden;
+}
+
+.work-detail-proposal-link {
+    display: block;
+    overflow: hidden;
+}
+
+.work-detail-proposal-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.work-detail-proposal-link:hover img {
+    transform: scale(1.03);
+}
+
+.work-detail-proposal-body {
+    padding: 20px 22px 0;
+}
+
+.proposal-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.proposal-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(196, 164, 107, 0.18);
+    color: var(--color-gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.proposal-badge {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: #FFFFFF;
+    background: var(--color-gold);
+    padding: 3px 8px 2px;
+    border-radius: 2px;
+    line-height: 1.4;
+}
+
+.proposal-copy {
+    margin-bottom: 10px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text);
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+}
+
+.proposal-desc {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.95;
+    color: var(--color-text-sub);
+}
+
+.work-detail-proposal-note {
+    margin-top: 18px;
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--color-text-sub);
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+
+/* ---------- 08 - Variations（ご参考：他の方向性）---------- */
+
+.work-detail-variation {
+    padding: 4px 0 64px;
+    background: var(--color-bg);
+}
+
+.work-detail-variation-lead {
+    margin: 0 auto 32px;
+    max-width: 720px;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 2;
+    color: var(--color-text-sub);
+    text-align: center;
+    text-wrap: pretty;
+}
+
+.work-detail-variation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px 28px;
+}
+
+.work-detail-variation-card {
+    margin: 0;
+    text-align: center;
+}
+
+.work-detail-variation-card img {
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto 12px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid var(--color-border-light);
+    box-shadow: 0 6px 18px rgba(80, 60, 40, 0.07);
+}
+
+.work-detail-variation-card h3 {
+    margin-bottom: 4px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--color-text);
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+}
+
+.work-detail-variation-card p {
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--color-text-sub);
+    letter-spacing: 0.02em;
+    line-height: 1.7;
+}
+
+/* PLAN ラベル・ターゲット表記（07で使用） */
+.proposal-plan {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    color: var(--color-text-sub);
+}
+
+.proposal-target {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--color-border);
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--color-gold);
+    letter-spacing: 0.04em;
+    line-height: 1.7;
+}
+
+/* 07・08 - ヒーローのテキスト幅
+   どちらも画像の左側が無地のため、モヤ（グラデーション）は敷かない */
+@media (min-width: 768px) {
+    .work-detail-gourmet-post-page .work-detail-hero-text,
+    .work-detail-protein-banner-page .work-detail-hero-text {
+        position: relative;
+        z-index: 3;
+        width: clamp(280px, 34vw, 380px);
+        max-width: 100%;
+    }
+
+    .work-detail-gourmet-post-page .work-detail-title,
+    .work-detail-protein-banner-page .work-detail-title {
+        font-size: clamp(26px, 2.6vw, 34px);
+    }
+
+    .work-detail-gourmet-post-page .work-detail-lead,
+    .work-detail-protein-banner-page .work-detail-lead {
+        font-size: clamp(12px, 1.05vw, 13px);
+    }
+}
+
+/* 08 - タブレット */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .work-detail-proposal-grid {
+        gap: 18px;
+    }
+
+    .work-detail-proposal-body {
+        padding: 16px 16px 0;
+    }
+
+    .proposal-copy {
+        font-size: 14px;
+    }
+
+    .work-detail-variation-grid {
+        gap: 28px 18px;
+    }
+
+    .work-detail-variation-card img {
+        max-width: 180px;
+    }
+}
+
+/* 08 - スマホ：3案は縦積み（画像が大きく見えるように） */
+@media (max-width: 767px) {
+    .work-detail-proposal {
+        padding: 4px 0 56px;
+    }
+
+    .work-detail-proposal-lead {
+        margin-bottom: 28px;
+        font-size: 12px;
+        line-height: 1.95;
+        text-align: left;
+    }
+
+    .work-detail-proposal-lead .proposal-br-pc {
+        display: none;
+    }
+
+    .work-detail-proposal-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+
+    /* ご参考は「サッと眺める」ものなので、スマホでも2列を維持 */
+    .work-detail-variation {
+        padding: 4px 0 56px;
+    }
+
+    .work-detail-variation-lead {
+        margin-bottom: 26px;
+        font-size: 12px;
+        line-height: 1.95;
+        text-align: left;
+    }
+
+    .work-detail-variation-lead .variation-br-pc {
+        display: none;
+    }
+
+    .work-detail-variation-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 26px 16px;
+    }
+
+    .work-detail-variation-card img {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .work-detail-variation-card h3 {
+        font-size: 11px;
+    }
+
+    .work-detail-variation-card p {
+        font-size: 10px;
+    }
 }
