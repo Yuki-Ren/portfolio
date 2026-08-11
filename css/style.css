@@ -1806,7 +1806,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ---------- Design Point ---------- */
 .work-detail-points {
-    padding: 0 0 72px;
+    padding: 0 0 144px;
     background: var(--color-bg);
 }
 
@@ -1880,7 +1880,7 @@ img { max-width: 100%; height: auto; display: block; }
 .work-detail-back {
     display: flex;
     justify-content: center;
-    margin-top: 72px;
+    margin-top: 144px;
 }
 
 .work-detail-back-link {
@@ -2288,7 +2288,7 @@ img { max-width: 100%; height: auto; display: block; }
 
     /* ---------- Design Point ---------- */
     .work-detail-points {
-        padding-bottom: 64px;
+        padding-bottom: 128px;
     }
 
     .work-detail-points-box {
@@ -2335,7 +2335,7 @@ img { max-width: 100%; height: auto; display: block; }
 
     /* ---------- Back Button ---------- */
     .work-detail-back {
-        margin-top: 64px;
+        margin-top: 128px;
     }
 
     .work-detail-back-link {
@@ -2698,12 +2698,12 @@ img { max-width: 100%; height: auto; display: block; }
 
     /* Design Point枠線下 → Back to Works枠線上 */
     .work-detail-back {
-        margin-top: 48px;
+        margin-top: 96px;
     }
 
     /* Back to Works枠線下 → footer上線 */
     .work-detail-points {
-        padding-bottom: 48px;
+        padding-bottom: 96px;
     }
 }
 
@@ -4246,5 +4246,169 @@ img { max-width: 100%; height: auto; display: block; }
 
     .work-detail-variation-card p {
         font-size: 10px;
+    }
+}
+
+/* ==================================================
+   WORK DETAIL - 制作概要 / ご依頼内容ボックス（再利用コンポーネント）
+   全Worksページ共通。自主制作＝「制作概要」、受注制作＝「ご依頼内容」。
+   Overviewの冒頭に置き、媒体/テーマ/ターゲット/サイズ等をひと目で提示。
+   将来のBefore→After事例（改善前の課題・改善後の狙い）にも
+   .work-brief-notes で自然に拡張できる構造。
+================================================== */
+
+.work-brief {
+    margin-bottom: 104px;
+    padding: 24px 30px;
+    background: var(--color-bg-soft);
+    border: 1px solid var(--color-border-light);
+    border-radius: 8px;
+}
+
+.work-brief-main {
+    display: flex;
+    align-items: flex-start;
+    gap: 26px;
+}
+
+.work-brief-label {
+    flex: 0 0 auto;
+    margin-top: 2px;
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    background: var(--color-text);
+    color: var(--color-bg);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.work-brief-grid {
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 18px 26px;
+    margin: 0;
+}
+
+.work-brief-item {
+    min-width: 0;
+}
+
+.work-brief-item dt {
+    margin-bottom: 5px;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: var(--color-gold);
+}
+
+.work-brief-item dd {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.65;
+    color: var(--color-text);
+}
+
+/* --- Before→After 拡張用（改善前の課題・改善後の狙いなど）---
+   .work-brief の中に .work-brief-notes を追加すると、
+   横並びスペックの下に全幅のラベル付き説明行を積める */
+.work-brief-notes {
+    margin: 22px 0 0;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border-light);
+    display: grid;
+    gap: 14px;
+}
+
+.work-brief-note {
+    display: grid;
+    grid-template-columns: 132px 1fr;
+    gap: 18px;
+    align-items: baseline;
+}
+
+.work-brief-note dt {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: var(--color-gold);
+    line-height: 1.5;
+    justify-self: start;
+}
+
+.work-brief-note dd {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--color-text-sub);
+}
+
+/* 制作概要ボックス - タブレット */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .work-brief {
+        margin-bottom: 88px;
+        padding: 22px 24px;
+    }
+
+    .work-brief-grid {
+        gap: 16px 20px;
+    }
+}
+
+/* 制作概要ボックス - スマホ */
+@media (max-width: 767px) {
+    .work-brief {
+        margin-bottom: 80px;
+        padding: 20px;
+    }
+
+    .work-brief-main {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .work-brief-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px 18px;
+    }
+
+    .work-brief-note {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+}
+
+/* ==================================================
+   WORK DETAIL - セクション間スペースを拡大（約2倍）
+   各セクションの上下paddingは非対称に最適化済みのため、
+   直接いじらず「隣接セクション間の加算margin」で調整する。
+   （Overview内にネストしたセクション抜粋には影響しない）
+================================================== */
+
+.work-detail-main > section + section {
+    margin-top: 64px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .work-detail-main > section + section {
+        margin-top: 52px;
+    }
+}
+
+@media (max-width: 767px) {
+    .work-detail-main > section + section {
+        margin-top: 44px;
     }
 }
