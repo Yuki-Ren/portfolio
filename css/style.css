@@ -4412,3 +4412,75 @@ img { max-width: 100%; height: auto; display: block; }
         margin-top: 44px;
     }
 }
+
+/* ==================================================
+   WORK DETAIL - CONSULTATION CTA
+================================================== */
+
+.work-detail-consultation {
+    margin-top: 72px;
+    padding: 48px;
+    border-radius: 28px;
+    background: #173f35;
+    color: #fffdf8;
+}
+
+.work-detail-consultation-label {
+    margin-bottom: 12px;
+    color: #d8b77a;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.work-detail-consultation h2 {
+    max-width: 760px;
+    font-size: clamp(1.65rem, 3vw, 2.5rem);
+    line-height: 1.5;
+}
+
+.work-detail-consultation p {
+    max-width: 760px;
+    margin-top: 18px;
+    line-height: 1.9;
+}
+
+.work-detail-consultation-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.work-detail-consultation-actions a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 52px;
+    padding: 0 24px;
+    border-radius: 999px;
+    text-decoration: none;
+}
+
+.work-detail-consultation-primary {
+    background: #c98668;
+    color: #fff;
+}
+
+.work-detail-consultation-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.48);
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    .work-detail-consultation {
+        margin-top: 48px;
+        padding: 32px 24px;
+    }
+
+    .work-detail-consultation-actions {
+        flex-direction: column;
+    }
+
+    .work-detail-consultation-actions a {
+        justify-content: center;
+    }
+}
