@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Yuki Design | 表示確認</title>
+<style>body{margin:0;background:#e9e7e1;font:14px system-ui;color:#282620}header{height:56px;display:flex;align-items:center;gap:16px;padding:0 20px;box-sizing:border-box}select{font:inherit;padding:5px}iframe{display:block;border:0;background:white;margin:0 auto}label{white-space:nowrap}</style></head>
+<body><header><strong>表示確認</strong><label>幅 <select id="width"><option>1440</option><option>768</option><option>390</option><option>320</option></select></label><label>ページ <select id="page"><option value="/">トップ</option><option value="/works/coffee-roastery.html">珈琲 紹介</option><option value="/works/glass-studio.html">ガラス 紹介</option><option value="/works/island-textile.html">染織 紹介</option><option value="/works/demos/coffee-roastery/index.html">珈琲 Demo</option><option value="/works/demos/glass-studio/index.html">ガラス Demo</option><option value="/works/demos/island-textile/index.html">染織 Demo</option><option value="/work-private-06-yoga-instructor-lp.html">既存ヨガLP</option><option value="/work-client-01-protein-banner.html">既存プロテイン</option></select></label><span id="size"></span></header>
+<iframe title="作品の表示確認" id="preview"></iframe>
+<script>
+const query = new URLSearchParams(location.search);
+const w = document.getElementById('width');
+const p = document.getElementById('page');
+if ([...w.options].some(o=>o.value===query.get('width'))) w.value=query.get('width');
+if ([...p.options].some(o=>o.value===query.get('page'))) p.value=query.get('page');
+function show(){const width=Number(w.value),height=width>=1000?900:width>=700?1024:844;const frame=document.getElementById('preview');frame.style.width=width+'px';frame.style.height=height+'px';frame.src=p.value;document.body.style.minWidth=Math.max(width,780)+'px';document.getElementById('size').textContent=width+' × '+height+' CSS px';history.replaceState(null,'','?width='+width+'&page='+encodeURIComponent(p.value));}
+w.addEventListener('change',show);p.addEventListener('change',show);show();
+</script></body></html>

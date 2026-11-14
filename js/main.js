@@ -6,9 +6,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const target = document.querySelector(href);
         if (!target) return;
         e.preventDefault();
-        const headerH = document.querySelector('.header').offsetHeight;
+        const headerH = document.querySelector('.header')?.offsetHeight || 0;
         const top = target.getBoundingClientRect().top + window.scrollY - headerH;
-        window.scrollTo({ top, behavior: 'smooth' });
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top, behavior: reduceMotion ? 'instant' : 'smooth' });
+        if (this.classList.contains('skip-link')) target.focus({ preventScroll: true });
     });
 });
 

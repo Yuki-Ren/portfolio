@@ -11,18 +11,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/refresh.css">
 </head>
 
 <body class="work-detail-page work-detail-medical-lp-page">
+    <a class="skip-link" href="#main-content">本文へ移動</a>
 
     <!-- ========== HEADER ========== -->
     <header class="header">
         <div class="header-inner container">
             <a href="index.html#top" class="logo">
-                <img src="images/header/header_megane.png" alt="Ren Yuki ロゴ" class="logo-img">
-                <span class="logo-name">Ren Yuki</span>
+                <img src="images/header/header_megane.png" alt="" class="logo-img" width="2084" height="1459">
+                <span class="logo-name">Yuki Design<span class="logo-byline">Ren Yuki</span></span>
             </a>
-            <nav class="nav">
+            <nav class="nav" aria-label="メインナビゲーション">
                 <ul class="nav-list">
                     <li><a href="index.html#top" class="nav-link">Top</a></li>
                     <li><a href="index.html#works" class="nav-link active">Works</a></li>
@@ -33,7 +35,7 @@
         </div>
     </header>
 
-    <main class="work-detail-main">
+    <main id="main-content" class="work-detail-main" tabindex="-1">
 
         <!-- ========== DETAIL HERO ========== -->
         <section class="work-detail-hero" aria-labelledby="work-detail-title">
@@ -306,7 +308,7 @@
 
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
-        <p>&copy; 2026 Ren Yuki</p>
+        <p>&copy; 2026 Yuki Design / Ren Yuki</p>
     </footer>
 
     <script src="js/main.js"></script>
