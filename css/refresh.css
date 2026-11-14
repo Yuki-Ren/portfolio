@@ -175,3 +175,16 @@ main:focus { outline: none; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
+
+/* Let the existing protein case introduction fit at tablet widths. */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .work-detail-protein-banner-page .work-detail-hero { aspect-ratio: auto; }
+  .work-detail-protein-banner-page .work-detail-hero-inner { height: auto; min-height: 56.25vw; padding-bottom: 32px; }
+  .work-detail-protein-banner-page .work-detail-hero-text { margin-top: 36px; }
+  .work-detail-protein-banner-page .work-detail-hero-visual { bottom: auto; height: auto; aspect-ratio: 16 / 9; }
+}
+
+@media (max-width: 359px) {
+  .intro-portrait { gap: 16px; }
+  .intro-portrait figcaption strong { font-size: 24px; white-space: nowrap; }
+}
